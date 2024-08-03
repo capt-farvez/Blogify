@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggify/Add-QnA</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="question">Question:</label><br>
+        <input type="text" id="question" name="question" required><br><br>
+        
+        <label for="answer">Answer:</label><br>
+        <input type="text" id="answer" name="answer" required><br><br>
+        
+        <button type="submit">Add QnA</button>
+    </form>
+
+</body>
+</html>
