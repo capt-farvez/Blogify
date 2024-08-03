@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Blog</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Blog Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="abstract">Abstract:</label><br>
+        <input type="text" id="abstract" name="abstract" required><br><br>
+
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" ><br><br>
+        
+        <button type="submit">Update Blog</button>
+    </form>
+
+    <script>
+            document.getElementById("date").innerHTML = Date();
+    </script>
+
+</body>
+</html>
