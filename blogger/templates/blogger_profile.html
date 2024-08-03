@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor Profile</title>
+  </head>
+  <body>
+    <h2>Editor Profile</h2>
+    <p>Welcome, {{ user.get_full_name }}!</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Bio: {{ blogger.bio }}</p>
+
+    <div class="form-link">
+      Update <a href="{% url 'profile_update' %}">Update</a>
+    </div>
+
+    {% comment %} <div class="form-link">
+        logout <a href="{% url 'logout' %}">logout</a>
+    </div> {% endcomment %}
+  </body>
+</html>

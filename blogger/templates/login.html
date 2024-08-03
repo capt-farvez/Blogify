@@ -1,0 +1,59 @@
+<title>Login</title>
+<body>
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="email" class="form-label">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="form-control"
+        placeholder="Enter your email"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">Password</label>
+      <div class="password-field">
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          class="form-control"
+          name="psw"
+          required
+        />
+        <i class="bx bx-hide eye-icon"></i>
+      </div>
+    </div>
+
+    <div class="form-link">
+      <a href="#" class="forgot-pass">Forgot password?</a>
+    </div>
+
+    <button type="submit" >Login</button>
+  </form>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const pwShowHide = document.querySelectorAll(".eye-icon");
+
+    pwShowHide.forEach((eyeIcon) => {
+      eyeIcon.addEventListener("click", () => {
+        let passwordField =
+          eyeIcon.parentElement.querySelector(".form-control");
+
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          eyeIcon.classList.replace("bx-hide", "bx-show");
+        } else {
+          passwordField.type = "password";
+          eyeIcon.classList.replace("bx-show", "bx-hide");
+        }
+      });
+    });
+  });
+</script>

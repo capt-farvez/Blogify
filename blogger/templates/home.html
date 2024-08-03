@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bloggify/home</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .welcome-box {
+            background-color: #3498db;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .blog-list-header {
+            font-size: 24px;
+            color: #333;
+            margin: 20px;
+        }
+
+        .blog-box {
+            background-color: #ecf0f1;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-title {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .blog-abstract {
+            color: #333;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #27ae60;
+        }
+
+        .add-todo-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-todo-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="todo-list-header">Blog List</h1>
+    <ul>
+        {% for blog in blogs %}
+            <li class="blog-box">
+                <h3 class="blog-title">{{ blog.title }}</h3>
+                <p class="blog-abstract">{{ blog.abstract }}</p>
+                <p class="blog-abstract">Blogger: {{ blog.user }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    </div>
+
+</body>

@@ -1,0 +1,17 @@
+{% block title %}
+logout
+{% endblock title %}
+
+{% block content %}
+
+<div class="logout">
+    <h1>Logout Successfully</h1>
+    <from method="post">
+        <div class="signin_link">
+            Login again? <a href="{% url 'blogger_login' %}">Login</a>
+        </div>
+
+    </from>
+</div>
+
+{% endblock %}
