@@ -22,4 +22,5 @@ urlpatterns = [
 
     path('', include('portal.urls')),
     path('blog/', include('blog.urls')),
+    path('user/', include('blogger.urls')),
 ]
